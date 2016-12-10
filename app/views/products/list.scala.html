@@ -1,0 +1,10 @@
+@(products: List[Product])(implicit messages: Messages) @* 템플릿 매개변수 *@
+
+@main(Messages("application.name")) {
+  <dl class="products">
+    @for(product <- products) { @* products  매개변수를 순회 *@
+      <dt>@product.name</dt>
+      <dt>@product.description</dt>
+    }
+  </dl>
+}
